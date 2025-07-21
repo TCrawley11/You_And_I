@@ -5,7 +5,7 @@ from google.genai import types
 from google.genai.types import HttpOptions
 
 load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key: str = os.getenv("GOOGLE_API_KEY")
 
 client = genai.Client(
     http_options=HttpOptions(api_version="v1")
